@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cred_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-mA-RPU">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2cA-qX-TfV">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2cA-qX-TfV" firstAttribute="top" secondItem="Ibh-mA-RPU" secondAttribute="top" id="3Oc-4P-rGb"/>
+                                    <constraint firstAttribute="bottom" secondItem="2cA-qX-TfV" secondAttribute="bottom" id="8u1-3N-gEW"/>
+                                    <constraint firstAttribute="height" constant="100" id="VQM-lv-s2Q"/>
+                                    <constraint firstItem="2cA-qX-TfV" firstAttribute="leading" secondItem="Ibh-mA-RPU" secondAttribute="leading" id="jo6-kP-ybI"/>
+                                    <constraint firstAttribute="trailing" secondItem="2cA-qX-TfV" secondAttribute="trailing" id="sIF-U2-VHy"/>
+                                    <constraint firstAttribute="width" constant="100" id="u4t-2R-50J"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psB-rF-Ogk">
+                                <rect key="frame" x="146.66666666666666" y="713" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KOc-nD-JPU"/>
+                                    <constraint firstAttribute="height" constant="100" id="eHY-74-I5c"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-7R-v3c">
+                                <rect key="frame" x="121.66666666666669" y="59" width="150" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="BU1-Ao-gNG"/>
+                                    <constraint firstAttribute="height" constant="30" id="leE-K5-PSq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Success"/>
+                                    <segment title="Failure"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SFBtn:" destination="BYZ-38-t0r" eventType="valueChanged" id="iJS-bc-Jj1"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.21704931972789115" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="psB-rF-Ogk" secondAttribute="bottom" constant="5" id="07X-EK-02Z"/>
+                            <constraint firstItem="Ibh-mA-RPU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JtL-xu-mEu"/>
+                            <constraint firstItem="psB-rF-Ogk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h8c-6p-3cH"/>
+                            <constraint firstItem="vLL-7R-v3c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pBf-rH-7xT"/>
+                            <constraint firstItem="vLL-7R-v3c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sZF-NE-HX5"/>
+                            <constraint firstItem="Ibh-mA-RPU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wOC-ab-FCa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SFSegments" destination="vLL-7R-v3c" id="vP8-rK-osb"/>
+                        <outlet property="bottomContainerView" destination="psB-rF-Ogk" id="wXW-BU-hjv"/>
+                        <outlet property="circleImg" destination="2cA-qX-TfV" id="ZFR-Bg-wNH"/>
+                        <outlet property="circleView" destination="Ibh-mA-RPU" id="Pui-pJ-gvP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.877862595419849" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle_logo" width="140.66667175292969" height="138.33332824707031"/>
+    </resources>
+</document>
